@@ -32,7 +32,7 @@ with col2:
     pet_wid_cm = st.number_input(label="Petal Width (in cm)")
 
 if st.button("Classify iris"):
-    data = [sep_len_cm, sep_wid_cm, pet_len_cm, pet_wid_cm]
-    df = pd.DataFrame(data, columns=['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm'])
+    data = {'slc': sep_len_cm, 'swc': sep_wid_cm, 'plc': pet_len_cm, 'pwc': pet_wid_cm}
+    df = pd.DataFrame([list(data.values())], columns=['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm'])
     result = predict(df)
     print("La flor es una: ", result)
