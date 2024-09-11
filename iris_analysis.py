@@ -13,12 +13,13 @@ def predict(data):
     pipeline = joblib.load('pipeline.sav')
     pipelined_data = pipeline.fit_transform(data)
     predicted_class = log_reg.predict(pipelined_data)
-    if predicted_class[0] == 0:
-        return 'Iris-setosa'
-    elif predicted_class[0] == 1:
-        return 'Iris-versicolor'
-    elif predicted_class[0]:
-        return 'Iris-virginica'
+    #if predicted_class[0] == 0:
+    #    return 'Iris-setosa'
+    #elif predicted_class[0] == 1:
+    #    return 'Iris-versicolor'
+    #elif predicted_class[0]:
+    #    return 'Iris-virginica'
+    return predicted_class
     
 st.title("Clasificar tipos de iris")
 st.header("Variables")
