@@ -35,4 +35,4 @@ if st.button("Classify iris"):
     data = {'slc': sep_len_cm, 'swc': sep_wid_cm, 'plc': pet_len_cm, 'pwc': pet_wid_cm}
     df = pd.DataFrame([list(data.values())], columns=['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm'])
     result = predict(df)
-    print("La flor es una: ", result)
+    st.text("La flor es una: {}".format(result))
