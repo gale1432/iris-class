@@ -17,9 +17,9 @@ def predict(data):
     #    return 'Iris-setosa'
     #elif predicted_class[0] == 1:
     #    return 'Iris-versicolor'
-    #elif predicted_class[0]:
+    #elif predicted_class[0] == 2:
     #    return 'Iris-virginica'
-    return predicted_class
+    return predicted_class[0]
     
 st.title("Clasificar tipos de iris")
 st.header("Variables")
