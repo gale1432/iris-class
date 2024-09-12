@@ -11,7 +11,7 @@ import joblib
 def predict(data):
     log_reg = joblib.load('logistic_regression.sav')
     pipeline = joblib.load('pipeline.sav')
-    pipelined_data = pipeline.fit_transform(data)
+    pipelined_data = pipeline.transform(data)
     predicted_class = log_reg.predict(pipelined_data)
     #if predicted_class[0] == 0:
     #    return 'Iris-setosa'
